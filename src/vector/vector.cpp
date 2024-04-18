@@ -16,3 +16,8 @@ Vector::Vector(int size) {
 int & Vector::operator[](int index) {
     return value[index];
 }
+
+
+Eigen::WithFormat<Eigen::VectorXf> Vector::format(const Eigen::IOFormat format) {
+    return value->format(format);
+}

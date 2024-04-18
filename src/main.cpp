@@ -1,7 +1,7 @@
 #include <iostream>
 #include <Eigen/Dense>
 
-#include "vector/vector.h"
+#include "vector.h"
 
 
 int main(int argc, char **argv) {
@@ -11,9 +11,10 @@ int main(int argc, char **argv) {
     Eigen::IOFormat CleanFmt(3, 0, ", ", "\n", "[", "]");
 
     // Initialize some parameters
-    std::unique_ptr<Eigen::VectorXd> parameters = std::make_unique<Eigen::VectorXd>(10);
-    *parameters << 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
-    std::cout << parameters->format(CleanFmt) << std::endl;
+    Vector::Ptr parameters = std::make_unique<Vector>(2);
+    parameters.get()[0] = 0;
+    parameters.get()[0] = 0;
+    //std::cout << parameters->format(CleanFmt) << std::endl;
 
     // Create critic
 

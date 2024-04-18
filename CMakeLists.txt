@@ -17,3 +17,11 @@ target_link_libraries(
     main
     Eigen3::Eigen
 )
+
+
+# includes
+target_include_directories(
+    main
+    PUBLIC
+        src/vector/include
+)
